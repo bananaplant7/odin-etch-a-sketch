@@ -1,0 +1,13 @@
+table {
+    border: 0.01px solid;
+    width: 70px;
+    aspect-ratio: 1/1; /*sets width = height */
+}
+
+td {
+    border: 0.01px solid; 
+}
+
+* {
+    border-collapse: collapse;
+}
