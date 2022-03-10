@@ -16,3 +16,6 @@ function makeGrid() { // used: https://www.youtube.com/watch?v=23AGsRkghjo
 
 makeGrid();
 
+const squares = document.querySelectorAll('td');
+squares.forEach(square => square.addEventListener('mouseover', function(e) {
+    this.style.backgroundColor = 'green'}))
