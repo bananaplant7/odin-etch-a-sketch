@@ -4,7 +4,8 @@ td {
 
 #container {
     border-collapse: collapse;
-    width: 70px;
+    width: 700px;
     aspect-ratio: 1/1; /*sets width = height */
+    margin: 25px auto;
     
 }
