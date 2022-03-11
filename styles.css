@@ -1,11 +1,48 @@
+body {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
 td {
     border: 0.01px solid; 
 }
 
-#container {
+#sketchpad {
+    background-color: #FBF8F1;
     border-collapse: collapse;
-    width: 700px;
+    width: 500px;
     aspect-ratio: 1/1; /*sets width = height */
     margin: 25px auto;
     
+}
+
+#flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#options{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#options button, .color-picker, .grid-slider {
+    width: auto;
+    height: 35px;
+    justify-content: center;
+    border-radius: 7px;
+    border-color: #54BAB9;
+    font-size: 16px;
+}
+
+.slider-value {
+    display: flex;
+    justify-content: center;
 }

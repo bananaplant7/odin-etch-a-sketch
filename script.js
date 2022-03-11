@@ -1,5 +1,5 @@
 function makeGrid() { // used: https://www.youtube.com/watch?v=23AGsRkghjo 
-    let tbl = document.getElementById('container');
+    let tbl = document.getElementById('sketchpad');
 
     for (let i = 1; i <= 16; i++) {
         let myRow = document.createElement('tr');
@@ -18,4 +18,4 @@ makeGrid();
 
 const squares = document.querySelectorAll('td');
 squares.forEach(square => square.addEventListener('mouseover', function(e) {
-    this.style.backgroundColor = 'green'}))
+    this.style.backgroundColor = 'black'}))
