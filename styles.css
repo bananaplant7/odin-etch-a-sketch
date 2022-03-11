@@ -46,3 +46,7 @@ td {
     display: flex;
     justify-content: center;
 }
+
+.toggle-on {
+    background-color: lightblue;
+}

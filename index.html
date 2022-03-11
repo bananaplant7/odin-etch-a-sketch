@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,18 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <h1>Etch-a-Sketch</h1>
     <div id="flex-container">
         <div id="options">
             <input type="color" class="color-picker">
-            <button>color mode</button>
-            <button>eraser</button>
+            <button class="toggle">color mode</button>
+            <button class="toggle">eraser</button>
             <button class="clear-btn">clear</button>
-            <button>rainbow mode</button>
-            <button>hover mode</button>
-            <button>click mode</button>
+            <button class="toggle">rainbow mode</button>
+            <button class="toggle">hover mode</button>
+            <button class="toggle">click mode</button>
             <div class="slider-container">
                 <div class="slider-value">16 x 16</div>
                 <input type="range" min="1" max="100" value="16" class="grid-slider">
@@ -28,8 +30,9 @@
             <table id='sketchpad'></table>
         </div>
     </div>
-    
-    
-    
+
+
+
 </body>
+
 </html>
