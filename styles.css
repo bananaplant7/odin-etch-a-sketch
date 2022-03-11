@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(247, 236, 222)
+    background-color: #F7ECDE;
 }
 
 h1 {
@@ -12,7 +12,7 @@ td {
 }
 
 #sketchpad {
-    background-color: rgb(251, 248, 241);
+    background-color: #FBF8F1;
     border-collapse: collapse;
     width: 500px;
     aspect-ratio: 1/1; /*sets width = height */
@@ -38,7 +38,7 @@ td {
     height: 35px;
     justify-content: center;
     border-radius: 7px;
-    border-color: rgb(84, 186, 185);
+    border-color: #54BAB9;
     font-size: 16px;
 }
 
