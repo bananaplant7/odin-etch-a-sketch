@@ -1,11 +1,12 @@
 let squares = document.querySelectorAll('td');
 function clearGrid() {
-    squares.forEach(square => square.remove())
+    squares.forEach(square => square.remove());
 }
 
-function makeGrid(x,y) { // used: https://www.youtube.com/watch?v=23AGsRkghjo
-    clearGrid()
-    
+// clear existing grid, make new grid, update squares selector
+function makeGrid(x, y) { // used: https://www.youtube.com/watch?v=23AGsRkghjo
+    clearGrid();
+
     let tbl = document.getElementById('sketchpad');
     for (let i = 1; i <= y; i++) {
         let myRow = document.createElement('tr');
@@ -20,17 +21,7 @@ function makeGrid(x,y) { // used: https://www.youtube.com/watch?v=23AGsRkghjo
     }
     squares = document.querySelectorAll('td');
 }
-makeGrid(16,16)
-
-const sliderValue = document.querySelector('.slider-value');
-const gridSlider = document.querySelector('.grid-slider');
-gridSlider.addEventListener('input', function () {
-    sliderValue.textContent = `${gridSlider.value} x ${gridSlider.value}`;
-    makeGrid(gridSlider.value,gridSlider.value);
-    
-});
-
-
+makeGrid(16, 16);
 
 const colorPicker = document.querySelector('.color-picker');
 let color = 'black';
@@ -64,12 +55,14 @@ eraserBtn.addEventListener('click', function () {
     eraserMode();
 });
 
+// change background of all squares to white
 const clear = document.querySelector('.clear-btn');
 clear.addEventListener('click', function () {
     squares.forEach(square => square.style.backgroundColor = 'white');
 });
 
-function randomRGB() { //returns random rgb color
+//returns random rgb color
+function randomRGB() {
     let firstRGB = Math.floor(Math.random() * 256);
     let secondRGB = Math.floor(Math.random() * 256);
     let thirdRGB = Math.floor(Math.random() * 256);
@@ -90,6 +83,14 @@ rainbowBtn.addEventListener('click', function () {
 });
 
 
+const sliderValue = document.querySelector('.slider-value');
+const gridSlider = document.querySelector('.grid-slider');
+// updates the slider text, makes new grid
+gridSlider.addEventListener('input', function () {
+    sliderValue.textContent = `${gridSlider.value} x ${gridSlider.value}`;
+    makeGrid(gridSlider.value, gridSlider.value);
+
+});
 
 const toggles = document.querySelectorAll('.toggle');
 
