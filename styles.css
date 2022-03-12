@@ -12,7 +12,7 @@ td {
 }
 
 #sketchpad {
-    background-color: #FBF8F1;
+    background-color: white;
     border-collapse: collapse;
     width: 500px;
     aspect-ratio: 1/1; /*sets width = height */

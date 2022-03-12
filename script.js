@@ -37,12 +37,36 @@ colorBtn.addEventListener('click', function () {
     colorMode();
 });
 
-const clear = document.querySelector('.clear-btn');
-clear.addEventListener('click', function () {
-    squares.forEach(square => square.style.backgroundColor = '#FBF8F1');
+// turns on eraser
+function eraserMode() {
+    squares.forEach(square => square.addEventListener('mouseover', function () {
+        this.style.backgroundColor = 'white';
+    }));
+}
+
+// when eraserBtn clicked, turn on eraser
+const eraserBtn = document.querySelector('.eraser');
+eraserBtn.addEventListener('click', function () {
+    eraserMode();
 });
 
+const clear = document.querySelector('.clear-btn');
+clear.addEventListener('click', function () {
+    squares.forEach(square => square.style.backgroundColor = 'white');
+});
 
+// turns on rainbowMode
+function rainbowMode() {
+    squares.forEach(square => square.addEventListener('mouseover', function () {
+        this.style.backgroundColor = randomRGB();
+    }));
+}
+
+// when rainbowBtn clicked, turn on rainbowMode
+const rainbowBtn = document.querySelector('.rainbow-btn');
+rainbowBtn.addEventListener('click', function () {
+    rainbowMode();
+});
 
 const toggles = document.querySelectorAll('.toggle');
 
@@ -57,3 +81,10 @@ toggles.forEach(toggle => toggle.addEventListener('click', function () {
     toggle.classList.add('toggle-on');
 }));
 
+
+function randomRGB() {
+    let firstRGB = Math.floor(Math.random() * 256);
+    let secondRGB = Math.floor(Math.random() * 256);
+    let thirdRGB = Math.floor(Math.random() * 256);
+    return `rgb(${firstRGB},${secondRGB},${thirdRGB})`;
+}
