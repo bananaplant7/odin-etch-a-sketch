@@ -1,5 +1,7 @@
 # odin-etch-a-sketch
 
+live demo: https://bananaplant7.github.io/odin-etch-a-sketch/
+
 Practiced:
 
 - flexbox
